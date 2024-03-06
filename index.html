@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Formulaire Responsive</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+    <h1>Formulaire de contact</h1>
+    <form action="#">
+        <div class="champ">
+            <label for="pseudo">Votre Pseudo *</label>
+            <input type="text" id="pseudo" name="pseudo" placeholder="Votre pseudo" required maxlength="32" />
+        </div>
+        <div class="champ">
+            <label for="motdepasse">Votre Mot de passe *</label>
+            <input type="password" id="motdepasse" name="motdepasse" placeholder="Votre mot de passe" required />
+        </div>
+        <div class="champ">
+            <label for="email">Votre e-mail *</label>
+            <input type="email" id="email" name="email" placeholder="Votre adresse e-mail" required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+        </div>
+        <div class="champ champ-objet">
+            <label for="objet">Objet du message *</label>
+            <select id="objet" name="objet" required>
+                <option value="question">J'ai une question</option>
+                <option value="suggestion">Je fais une suggestion</option>
+                <option value="probleme">Je rencontre un problème</option>
+                <option value="autre">Autre</option>
+            </select>
+        </div>
+        <div class="champ">
+            <label for="message">Votre message *</label>
+            <textarea id="message" name="message" required maxlength="500" placeholder="Votre message"></textarea>
+            <p>
+                Nombre de caractères restants :
+                <span id="caracteres-restants">500</span>
+            </p>
+        </div>
+        <div class="champ">
+            <label for="niveau_urgence">Niveau d'urgence *</label>
+            <div class="options">
+                <input type="radio" id="urgent" name="niveau_urgence" value="urgent" />
+                <label for="urgent">Urgent</label>
+                <input type="radio" id="normal" name="niveau_urgence" value="normal" />
+                <label for="normal">Normal</label>
+                <input type="radio" id="pas_urgent" name="niveau_urgence" value="pas_urgent" checked />
+                <label for="pas_urgent">lent</label>
+            </div>
+        </div>
+        <div class="champ politique">
+            <input type="checkbox" id="politique" name="politique" required />
+            <label for="politique">J'ai lu et j'accepte la
+                <a href="politique-de-confidentialite.html">politique de confidentialité</a>
+                du site.</label>
+        </div>
+        <button type="submit">Envoyer</button>
+    </form>
+</body>
+
+</html>
